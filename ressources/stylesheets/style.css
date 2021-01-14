@@ -1,0 +1,299 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "tt_commonsdemibold";
+  src: url("../fonts/ttcommons-demibold-webfont.woff2") format("woff2"), url("../fonts/ttcommons-demibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  background-color: #141414;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: tt_commonsdemibold, sans-serif; }
+
+/*affichage barre de navigation */
+header {
+  height: 7vh;
+  background: linear-gradient(180deg, #292929, #262626);
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: #c0c0c0; }
+
+#header__username {
+  min-width: 90px;
+  max-width: 250px;
+  height: 25px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 0; }
+  #header__username img {
+    float: left; }
+  #header__username span {
+    float: left;
+    margin-top: 9px;
+    margin-left: 6px; }
+
+#header__btn-upload {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px; }
+
+/*affichage playlist */
+#playlists {
+  left: 0;
+  top: 7vh;
+  width: 12%;
+  height: 69vh;
+  z-index: 2;
+  color: #c0c0c0;
+  background-color: #262626;
+  position: absolute; }
+  #playlists img {
+    float: left;
+    clear: both;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer; }
+  #playlists span {
+    float: left;
+    margin-top: 14px;
+    margin-left: 6px; }
+
+#playlists__playlist {
+  font-size: 1.5em; }
+
+#playlists__create {
+  font-size: 1.2em; }
+
+#playlists__list {
+  float: left;
+  clear: both;
+  margin-top: 10px;
+  width: 100%;
+  height: 83%;
+  overflow: hidden;
+  overflow-y: scroll; }
+  #playlists__list span {
+    margin-left: 10px;
+    color: #c0c0c0;
+    font-size: 1.2em;
+    float: left;
+    clear: both;
+    cursor: pointer; }
+
+/*affichage titre central */
+#display-playlist-title {
+  font-size: 4em;
+  color: #c0c0c0;
+  top: 7vh;
+  left: 12%;
+  right: 0;
+  z-index: 2;
+  background: linear-gradient(to top, transparent, #262626);
+  position: absolute;
+  height: 10vh;
+  padding-left: 25px;
+  padding-top: 1.5vh; }
+
+/*affichage central */
+#display {
+  left: 12%;
+  right: 0;
+  top: 16vh;
+  position: absolute;
+  height: 71vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  color: #c0c0c0;
+  font-size: 1.3em; }
+  #display table {
+    margin: 2%;
+    border-collapse: collapse;
+    text-align: left; }
+  #display td, #display th {
+    padding-left: 10px;
+    height: 40px; }
+  #display td {
+    border-top: solid 1px #5c5c5c;
+    cursor: pointer; }
+
+.display__table__title {
+  width: 30vw; }
+
+.display__table__artist {
+  width: 25vw; }
+
+.display__table__album {
+  width: 20vw; }
+
+.display__table__time {
+  width: 5vw; }
+
+.display__table__line:hover {
+  background-color: #5c5c5c;
+  color: #c0c0c0; }
+
+/*cover de la musique */
+#cover {
+  background-color: #707070;
+  left: 0;
+  width: 12%;
+  height: 24vh;
+  bottom: 0;
+  z-index: 2;
+  position: absolute; }
+
+/*footer contrôles musique */
+footer {
+  height: 13vh;
+  background-color: #262626;
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  right: 0;
+  color: #ffffff; }
+
+#footer__music-infos {
+  float: left;
+  width: 20%;
+  height: 60%;
+  margin-top: 5px;
+  margin-left: 1.5%;
+  overflow: hidden;
+  color: #c0c0c0;
+  font-size: 1.5em; }
+  #footer__music-infos span {
+    margin-left: 10px; }
+
+#footer__btn {
+  float: left;
+  margin-left: 17.5%;
+  margin-top: 10px; }
+  #footer__btn i {
+    color: #c0c0c0;
+    font-size: 30px;
+    cursor: pointer; }
+  #footer__btn img {
+    cursor: pointer; }
+
+#loop {
+  margin-left: 12px; }
+
+#footer__progress-bar {
+  width: 500px;
+  height: 6px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  background-color: #c0c0c0;
+  display: inline-block;
+  float: left;
+  clear: left;
+  cursor: pointer;
+  margin-left: 30%; }
+  #footer__progress-bar span {
+    font-size: 15px;
+    float: right;
+    clear: both;
+    color: #c0c0c0; }
+
+#progressBar {
+  width: 0;
+  background-color: #0072BB;
+  height: 6px;
+  border-radius: 6px;
+  text-align: right;
+  line-height: 15px;
+  font-size: 9px;
+  white-space: nowrap;
+  cursor: pointer;
+  float: left; }
+
+#footer__volume {
+  float: right;
+  margin-right: 2%;
+  margin-top: 3vh;
+  color: #292929; }
+  #footer__volume img {
+    cursor: pointer; }
+  #footer__volume:hover {
+    color: #c0c0c0; }
+
+#footer__volume__progress-range {
+  width: 200px;
+  height: 6px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  background-color: #c0c0c0;
+  display: inline-block;
+  float: left;
+  clear: left;
+  cursor: pointer; }
+
+#progressRange {
+  width: 100px;
+  max-width: 200px;
+  background-color: #0072BB;
+  height: 6px;
+  border-radius: 6px;
+  text-align: right;
+  line-height: 15px;
+  font-size: 9px;
+  white-space: nowrap;
+  cursor: pointer;
+  float: left; }
+
+/*personnalisation scrollbar */
+::-webkit-scrollbar {
+  background: none;
+  width: 14px; }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: #0072bb;
+  border-radius: 10px; }
+
+/*transfert de données PHP */
+#php_transferts {
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  color: #292929;
+  overflow: hidden; }
+
+/*personnalisation input range */
+input[type=range] {
+  -webkit-appearance: none;
+  height: 3px;
+  margin-top: 0;
+  width: 150px;
+  background-color: #292929; }
+  input[type=range]:focus {
+    outline: none; }
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 3px;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #c0c0c0; }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 13px;
+    width: 13px;
+    border-radius: 25px;
+    background: #c0c0c0;
+    cursor: pointer;
+    margin-top: -5px; }
+  input[type=range]:hover::-webkit-slider-thumb {
+    box-shadow: -100vw 0 0 100vw #0072BB; }
+
+#footer__volume__range {
+  height: 3px;
+  overflow: hidden; }
+
+/*# sourceMappingURL=style.css.map */
